@@ -22,16 +22,7 @@ const allPosts = ({ pageContext, data }) => {
   return (
     <Container>
       <Seo />
-      <FeatureImage />
       <Content>
-        <H1 textAlign="center" margin="0 0 1rem 0">
-          Elit rhoncus tellus proin parturient.
-        </H1>
-        <P color="dark2" textAlign="center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing
-          volutpat risus quis lorem pulvinar et pulvinar sit dictum. Eget orci,
-          orci in congue cursus nulla tincidunt facilisi.
-        </P>
         {posts.map(post => (
           <ContentCard
             key={post.node.frontmatter.slug}
@@ -42,13 +33,6 @@ const allPosts = ({ pageContext, data }) => {
           />
         ))}
       </Content>
-
-      <Pagination
-        isFirst={isFirst}
-        isLast={isLast}
-        prevPage={prevPage}
-        nextPage={nextPage}
-      />
     </Container>
   )
 }

@@ -1,9 +1,14 @@
 import styled from "styled-components"
 
 export const CardWrapper = styled.div`
-  margin-top: 2rem;
-  padding: 1rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  width: 400px;
+  padding: 1rem;
+
+  @media ${props => props.theme.breakpoints.mobile} {
+    width: auto;
+  }
 `
